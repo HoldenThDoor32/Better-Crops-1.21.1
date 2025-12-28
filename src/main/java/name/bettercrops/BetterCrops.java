@@ -1,8 +1,10 @@
 package name.bettercrops;
 
+import name.bettercrops.block.ModBlocks;
+import name.bettercrops.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,5 +17,9 @@ public class BetterCrops implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
+		CompostingChanceRegistry.INSTANCE.add(ModItems.CAULIFLOWER, 0.5F);
+		CompostingChanceRegistry.INSTANCE.add(ModItems.CAULIFLOWER_SEEDS, 0.3F);
+		CompostingChanceRegistry.INSTANCE.add(ModItems.BLACKBERRIES, 0.2F);
 	}
+
 }
