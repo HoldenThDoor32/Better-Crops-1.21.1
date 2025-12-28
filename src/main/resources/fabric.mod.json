@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "bettercrops",
+	"version": "${version}",
+	"name": "Better Crops",
+	"description": "A mod that focuses on adding new crops to the game, as well as more food types!",
+	"authors": [
+		"Holdenthedoor32"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": "https://github.com/holdenthedoor32/"
+	},
+	"license": "MIT",
+	"icon": "assets/bettercrops/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"name.bettercrops.BetterCrops"
+		],
+		"client": [
+			"name.bettercrops.BetterCropsClient"
+		],
+		"fabric-datagen": [
+			"name.bettercrops.BetterCropsDataGenerator"
+		]
+	},
+	"mixins": [
+		"bettercrops.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
