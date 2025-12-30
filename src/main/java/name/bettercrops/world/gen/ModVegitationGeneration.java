@@ -10,8 +10,14 @@ import net.minecraft.world.gen.placementmodifier.BiomePlacementModifier;
 
 public class ModVegitationGeneration {
 
-    public static void generateBushes() {
+    public static void generateBlackberryBushes() {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BLACKBERRY_BUSH_KEY);
     }
+
+    public static void generateBlueberryBushes() {
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.WINDSWEPT_HILLS, BiomeKeys.WINDSWEPT_FOREST),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BLUEBERRY_BUSH_KEY);
+    }
+
 }

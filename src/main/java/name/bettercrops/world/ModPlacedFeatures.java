@@ -22,14 +22,21 @@ public class ModPlacedFeatures {
     //here, we register every new item that will generate in the world.
 
     public static final RegistryKey<PlacedFeature> BLACKBERRY_BUSH_KEY = registerKey("blackberry_bush_placed");
+    public static final RegistryKey<PlacedFeature> BLUEBERRY_BUSH_KEY = registerKey("blueberry_bush_placed");
+
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
-        int blackberry_bush_spawn_rate = 48;
+        int blackberry_bush_spawn_rate = 38;
         //register the block configs here.
 
         register(context, BLACKBERRY_BUSH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLACKBERRY_BUSH_KEY),
-                RarityFilterPlacementModifier.of(blackberry_bush_spawn_rate), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+                RarityFilterPlacementModifier.of(blackberry_bush_spawn_rate), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()
+        );
+
+        register(context, BLUEBERRY_BUSH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLUEBERRY_BUSH_KEY),
+                RarityFilterPlacementModifier.of(12), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()
+        );
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

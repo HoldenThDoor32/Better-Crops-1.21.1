@@ -17,4 +17,7 @@ public class ModFoodComponents {
 
 
     public static final FoodComponent BLACKBERRIES = FoodComponents.SWEET_BERRIES;
+
+    public static final FoodComponent BLUEBERRIES = FoodComponents.SWEET_BERRIES;
+
 }

@@ -23,6 +23,8 @@ public class BetterCrops implements ModInitializer {
 		CompostingChanceRegistry.INSTANCE.add(ModItems.CAULIFLOWER, 0.5F);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.CAULIFLOWER_SEEDS, 0.3F);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.BLACKBERRIES, 0.2F);
+		CompostingChanceRegistry.INSTANCE.add(ModItems.BLUEBERRIES, 0.2F);
+
 
 		ModWorldGeneration.generateModWorldGen();
 	}

@@ -3,6 +3,7 @@ package name.bettercrops.block;
 
 import name.bettercrops.BetterCrops;
 import name.bettercrops.block.custom.BlackberryBushBlock;
+import name.bettercrops.block.custom.BlueberryBushBlock;
 import name.bettercrops.block.custom.CauliflowerCropBlock;
 import name.bettercrops.item.ModItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -30,10 +31,15 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.CROP)
                     .pistonBehavior(PistonBehavior.DESTROY)
 
-            ));
+            )
+    );
 
     public static final Block BLACKBERRY_BUSH = registerBlockWithoutItem(
             "blackberry_bush", new BlackberryBushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH))
+    );
+
+    public static final Block BLUEBERRY_BUSH = registerBlockWithoutItem(
+            "blueberry_bush", new BlueberryBushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH))
     );
 
 
@@ -57,9 +63,11 @@ public class ModBlocks {
                 new BlockItem(block, new Item.Settings()));
     }
 
+    //add to creative tab
     public static void registerModBlocks() {
         BetterCrops.LOGGER.info("Registering Mod Blocks for " + BetterCrops.MOD_ID);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
+
         });
 
     }

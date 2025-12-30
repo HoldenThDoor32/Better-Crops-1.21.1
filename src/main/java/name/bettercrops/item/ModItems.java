@@ -23,6 +23,9 @@ public class ModItems {
     public static final Item BLACKBERRIES = registerItem("blackberries",
             new AliasedBlockItem(ModBlocks.BLACKBERRY_BUSH, new Item.Settings().food(ModFoodComponents.BLACKBERRIES)));
 
+    public static final Item BLUEBERRIES = registerItem("blueberries",
+            new AliasedBlockItem(ModBlocks.BLUEBERRY_BUSH, new Item.Settings().food(ModFoodComponents.BLUEBERRIES)));
+
 
 
     private static Item registerItem(String name, Item item) {
@@ -39,6 +42,8 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
             entries.addAfter(Items.BEETROOT_SEEDS, CAULIFLOWER_SEEDS);
             entries.addAfter(Items.SWEET_BERRIES, BLACKBERRIES);
+            entries.addAfter(ModItems.BLACKBERRIES, BLUEBERRIES);
+
 
         });
 

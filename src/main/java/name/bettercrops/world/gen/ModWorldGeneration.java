@@ -6,7 +6,9 @@ public class ModWorldGeneration {
 
     public static void generateModWorldGen() {
 
-        ModVegitationGeneration.generateBushes();
+        ModVegitationGeneration.generateBlackberryBushes();
+        ModVegitationGeneration.generateBlueberryBushes();
+
 
     }
 }
